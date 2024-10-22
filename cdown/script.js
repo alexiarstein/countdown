@@ -1,3 +1,8 @@
+// Countdown Timer - Web Interface
+// Fun stupid little code to calculate how much time is left until we can finish something (leave work, finish a task, etc)
+// Author: Alexia steinberg <alexia@goldendoglinux.org>
+// Calculates the time and movement of the car towards the goal
+// License: GNU GPL 3.0 (See LICENSE For more information)
 const endTimeInput = document.getElementById('endTime');
 const startButton = document.getElementById('startButton');
 const timerElement = document.querySelector('.timer');
@@ -28,13 +33,13 @@ function updateTimer() {
         const hours = Math.floor(diff / 3600000);
         const minutes = Math.floor((diff % 3600000) / 60000);
         const seconds = Math.floor((diff % 60000) / 1000);
-
+        // You may want to replace "horas" "Minutos" and "Segundos" for Hours Minutes and Seconds if you are not a Spanish Speaker :V
         timerElement.textContent = `${hours} Horas ${minutes} Minutos ${seconds} Segundos`;
 
         const totalTime = endTime - new Date().setHours(0, 0, 0, 0);
         const elapsedTime = new Date() - new Date().setHours(0, 0, 0, 0);
         const progress = elapsedTime / totalTime;
-        carElement.style.left = `calc(${progress * 100}% - 75px)`;
+        carElement.style.left = `calc(${progress * 100}% - 200px)`;
     }
 }
 
