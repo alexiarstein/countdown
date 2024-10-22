@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+background-image: url(bg.jpg);
+background-repeat: no-repeat;
+
+}
+
+.container {
+    width: 100%;
+    margin: 285px auto;
+    text-align: center;
+}
+
+.timer {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.road {
+    position: relative;
+    width: 100%;
+    height: 200px;
+/*    background-color: #ccc; */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.start-text {
+    position: absolute;
+    left: 10px;
+    top: 10%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.finish-text {
+    position: absolute;
+    right: 10px;
+    top: 10%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.car {
+    position: absolute;
+    left: 0;
+    top: 40%;
+    transform: translateY(-50%);
+    transition: left 0.5s;
+    width: 250px;
+    height: 200px;
+    object-fit: contain;
+}
+
